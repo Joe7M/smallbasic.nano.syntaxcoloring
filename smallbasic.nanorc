@@ -48,7 +48,7 @@ icolor cyan "(^|^[[:space:]]*)(DATA|EXPORT|GOSUB|GOTO|IMPORT|INCLUDE|LABEL|OPTIO
 
 # Loops, conditionals, func and sub
 
-icolor brightblue "\<(CASE|CATCH|DECLARE|DEF|DEFINEKEY|DO|END|TRY|ENDIF|ELIF|ELSE|ELSEIF|FI|FOR|FUNC|IF|NEXT|REPEAT|RETURN|SELECT|SUB|STEP|THEN|TO|THROW|TRY|UNTIL|WEND|WHILE)\>"
+icolor brightyellow "\<(CASE|CATCH|DECLARE|DEF|DEFINEKEY|DO|END|TRY|ENDIF|ELIF|ELSE|ELSEIF|FI|FOR|FUNC|IF|NEXT|REPEAT|RETURN|SELECT|SUB|STEP|THEN|TO|THROW|TRY|UNTIL|WEND|WHILE)\>"
 
 icolor brightred "(^|^[[:space:]]*)(STOP|TRON|TROFF)\>"
 
@@ -60,27 +60,30 @@ icolor orange "\<(AND|BAND|BOR|EQV|IMP|LSHIFT|NAND|NOR|OR|RSHIFT|XNOR|XOR)\>"
 
 color white "[+*=\^]" "<" ">" "/" "-"
 icolor orange "\<(MDL|MOD)\>"
-color brightred "[@\~!]" 
+color brightred "[@\~!]"
 
 # Number constants
 
 icolor yellow  "\b0o?[0-7]+?\b" "\b0x[1-9a-f][0-9a-f]+?\b" "\b0b[01]+\b"
 icolor yellow "\b([0-9]+)\b"
 
-## parentheses
+# parentheses
 color magenta "[(){}]" "\[" "\]"
-
-# Comments.
-color gray "(^|^[[:space:]]*)'.*$"
-icolor gray "(^|^[[:space:]]*)REM.*$"
-color gray "!.*$"
-
-
-# Shebang
-icolor brightwhite,green "^\#\!.*$"
 
 # Strings
 color yellow "<[^= ]*>" ""(\\.|[^"])*""
 
-## reminders
+# Comments
+
+color brightblue "(^|^[[:space:]]*)'.*$"
+icolor brightblue "(^|^[[:space:]]*)REM.*$"
+color brightblue "!.*$"
+
+
+# Shebang
+
+icolor brightwhite,green "^\#\!.*$"
+
+# reminders
+
 color brightwhite,yellow "(FIXME|TODO|XXX)"
